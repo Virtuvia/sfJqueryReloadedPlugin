@@ -499,7 +499,7 @@ function jq_visual_effect($effect, $element_id = false, $js_options = array())
 	if(preg_match("/^(slide|fade)/i", $effect, $matches))
 	{
 		$count = strtolower($matches[1]) == 'fade'? 3 : 4;
-		$effect = preg_replace("/(^|_|-)+(.)/e", '', $effect); //remove non alpha char
+		$effect = preg_replace("/(^|_|-)+(.)/", '', $effect); //remove non alpha char
 		$effect = preg_replace('/\ +/', '', $effect);  //remove space
 			
 
